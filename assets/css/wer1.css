@@ -1,0 +1,90 @@
+.motto{
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+
+}
+
+.motto h3{
+    text-align: center;
+}
+
+.motto .motto-box{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.motto .motto-box:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.motto .motto-text{
+    font-size: 1rem;
+}
+
+.motto .head{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 0.1rem;
+}
+
+@media(max-width:330px) {
+    .motto .motto-box{
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+}
+
+.whyusContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.whyusImg{
+    height: 3rem;
+    display: inline-block;
+}
+
+.whyusHead{
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #484848;
+    align-self: center;
+    margin-left: 0.3rem
+}
+
+.whyusBox {
+    margin-bottom: 1rem;
+}
+
+.whyusBox .description {
+    margin-left: 53px;
+    text-align: justify;
+}
+
+.round {
+    width: 4rem;
+    height: 4rem;
+    background-color: #3498db; /* Circle background color */
+    border-radius: 50%; /* Creates a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Number color */
+    font-weight: bold; /* Number font weight */
+    margin-bottom: 1.5rem;
+  }
+
+.step-number {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
