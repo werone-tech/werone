@@ -19,4 +19,13 @@ $(document).ready(function() {
     $("#phoneFab").click(function () {
         window.location.href = "tel:+6565144693";
     });
+
+    $("#whatsappFab").click(function() {
+
+        var phoneNumber = "6565144693";
+        var message = "Hi%20Wer1,%20I%20would%20like%20to%20know%20more%20about%20the%20services";
+        var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + message;
+        
+        window.open(whatsappURL, '_blank');
+      });
 });

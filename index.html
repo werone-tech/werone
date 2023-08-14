@@ -28,7 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/wer1.css" rel="stylesheet">
-  <link href="assets/css/floating-wpp.min.css" rel="stylesheet">
 
   <!-- Clarity tracking code for https://wer1.sg/ -->
   <script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "gcfleoh2je");</script>
@@ -663,12 +662,14 @@
   <script src="assets/js/jquery-1.11.0.js"></script>
   <script src="assets/js/jqBootstrapValidation.js"></script>
   <script src="assets/js/floating-wpp.min.js"></script>
-  <script src="assets/js/whatsapp.js"></script>
+
   <script src="assets/js/jqBootstrapValidation.js"></script>
   <script src="assets/js/contact_me.js"></script>
   <script src="assets/js/triggerContact.js"></script>
 
-  <div id="whatsappDiv" class="whatsappFab"></div>
+  <div class="whatsappFab" id="whatsappFab">
+    <i class="bi bi-whatsapp"></i>
+  </div>
 
   <div class="phoneFab" id="phoneFab">
     <i class="bi bi-telephone"></i>
@@ -679,7 +680,7 @@
 <style>
 .phoneFab{
   width: 3rem;height: 3rem;background-color: #3498db;border-radius: 50%;
-  position: fixed;bottom: 4rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+  position: fixed;bottom: 7.5rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
 }
 
 .phoneFab i {
@@ -690,8 +691,17 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.whatsappFab {
-  bottom: 7.5rem;
+.whatsappFab{
+  width: 3rem;height: 3rem;background-color: #25D366;border-radius: 50%;
+  position: fixed;bottom: 4rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+}
+
+.whatsappFab i {
+  color: white; font-size: 1.5rem;
+}
+
+.whatsappFab:hover{
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 </style>
 
