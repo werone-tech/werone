@@ -11,4 +11,12 @@ $(document).ready(function() {
         // Open the user's default email client
         window.location.href = mailtoLink;
     });
+
+    $("#phoneLink").click(function () {
+        window.location.href = "tel:+6565144693";
+    });
+
+    $("#phoneFab").click(function () {
+        window.location.href = "tel:+6565144693";
+    });
 });
