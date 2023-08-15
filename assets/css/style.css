@@ -30,8 +30,8 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 20px;
+  bottom: 8rem;
   z-index: 996;
   background: #3498db;
   width: 40px;
@@ -490,6 +490,32 @@ section {
 .section-title p {
   margin: 15px 0 0 0;
 }
+
+@media (max-width: 460px) and (min-width: 420px) {
+
+.special-section-title h2::after,
+.special-section-title h2::before{
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: #3498db;
+  display: inline-block;
+}
+
+}
+
+@media (max-width: 419px) {
+
+  .special-section-title h2::after,
+  .special-section-title h2::before{
+    content: "";
+    width: 0rem;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+  }
+  
+  }
 
 /*--------------------------------------------------------------
 # Clients
