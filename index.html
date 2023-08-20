@@ -583,6 +583,11 @@
 
           <div class="col-lg-5 col-md-12">
             <form role="form" class="php-email-form" name="sentMessage" id="contactForm" novalidate>
+
+              <div class="my-3">
+                <div class="promoApplied" id="promoApplied">Promo code applied successfully</div>
+              </div>
+
               <div class="control-group form-group">
                 <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
                 <p class="help-block text-danger"></p>
@@ -606,7 +611,7 @@
               <div class="control-group form-group" style="display:none" id="promocodeDiv">
                 <input type="text" class="form-control" placeholder="Promo Code *" id="promocode">
               </div>
-              <small style="color: gray; padding: 0; margin: 0;" >By submitting this form, you are agreeing to our company's <a href="pdpa/pdpa.html">Privacy Data Protection Act (PDPA)</a> policy.</small>
+              <small style="color: gray; padding: 0; margin: 0;" id="tnc">By submitting this form, you are agreeing to our company's <a href="pdpa/pdpa.html">Privacy Data Protection Act (PDPA)</a> policy.</small>
 
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -665,6 +670,7 @@
   <script src="assets/js/jqBootstrapValidation.js"></script>
   <script src="assets/js/contact_me.js"></script>
   <script src="assets/js/triggerContact.js"></script>
+  <script src="assets/js/promocode.js"></script>
 
   <div class="whatsappFab" id="whatsappFab">
     <i class="bi bi-whatsapp"></i>
@@ -676,32 +682,6 @@
 
 </body>
 
-<style>
-.phoneFab{
-  width: 3rem;height: 3rem;background-color: #3498db;border-radius: 50%;
-  position: fixed;bottom: 4.5rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
-}
-
-.phoneFab i {
-  color: white; font-size: 1.5rem;
-}
-
-.phoneFab:hover{
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.whatsappFab{
-  width: 3rem;height: 3rem;background-color: #25D366;border-radius: 50%;
-  position: fixed;bottom: 1rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
-}
-
-.whatsappFab i {
-  color: white; font-size: 1.5rem;
-}
-
-.whatsappFab:hover{
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-</style>
+<link rel="stylesheet" href="assets/css/contactFab.css">
 
 </html>

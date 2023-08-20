@@ -1,0 +1,34 @@
+.phoneFab{
+    width: 3rem;height: 3rem;background-color: #3498db;border-radius: 50%;
+    position: fixed;bottom: 4.5rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+  }
+  
+  .phoneFab i {
+    color: white; font-size: 1.5rem;
+  }
+  
+  .phoneFab:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .whatsappFab{
+    width: 3rem;height: 3rem;background-color: #25D366;border-radius: 50%;
+    position: fixed;bottom: 1rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+  }
+  
+  .whatsappFab i {
+    color: white; font-size: 1.5rem;
+  }
+  
+  .whatsappFab:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact .php-email-form .promoApplied {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
