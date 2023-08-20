@@ -78,6 +78,8 @@ $(function() {
                         $("#contact #contactButton").html('Send Message');
                         $("#contact #contactButton").prop('disabled', false);
                         $("#contact .promoApplied").removeClass('d-block');
+                        $("#contact #message").attr("placeholder", "Your Message *");
+                        $('#contact #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy.");
                     }
                 );
             } catch (error) {
@@ -86,6 +88,8 @@ $(function() {
                 $("#contact #contactButton").html('Send Message');
                 $("#contact #contactButton").prop('disabled', false);
                 $("#contact .promoApplied").removeClass('d-block');
+                $("#contact #message").attr("placeholder", "Your Message *");
+                $('#contact #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy.");
             }
             
         },
