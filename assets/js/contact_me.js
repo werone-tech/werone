@@ -77,7 +77,7 @@ $(function() {
                         $('#contact #contactForm').trigger("reset");
                         $("#contact #contactButton").html('Send Message');
                         $("#contact #contactButton").prop('disabled', false);
-                        $("#contact .promoApplied").removeClassClass('d-block');
+                        $("#contact .promoApplied").removeClass('d-block');
                     }
                 );
             } catch (error) {
@@ -85,7 +85,7 @@ $(function() {
                 $('#contact #contactForm').trigger("reset");
                 $("#contact #contactButton").html('Send Message');
                 $("#contact #contactButton").prop('disabled', false);
-                $("#contact .promoApplied").removeClassClass('d-block');
+                $("#contact .promoApplied").removeClass('d-block');
             }
             
         },
