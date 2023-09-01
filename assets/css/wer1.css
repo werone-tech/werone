@@ -96,3 +96,7 @@
 #phoneLink {
     cursor: pointer;
 }
+
+#redeemVoucherButton:disabled {
+    background-color: lightgray;
+}
