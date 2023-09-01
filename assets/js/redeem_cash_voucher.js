@@ -78,7 +78,7 @@ $(document).ready(function() {
                         $("#voucherRedemption .loading").removeClass('d-block');
                         $('#voucherRedemption .error-message').addClass('d-block');
 
-                        window.gtag('event', 'form_submission_fail');
+                        window.gtag('event', 'voucher_redemption_form_submission_fail');
                     }
                     else{
                         // Success message
@@ -88,12 +88,12 @@ $(document).ready(function() {
                         $('#voucherRedemption .sent-message').addClass('d-block');
 
         
-                        window.gtag('event', 'form_submission_success');
+                        window.gtag('event', 'voucher_redemption_form_submission_success');
                     }
     
         
                 }).catch((error) => {
-                    window.gtag('event', 'form_submission_error');
+                    window.gtag('event', 'voucher_redemption_form_submission_error');
                 }).finally(
                     () => {
                         $('#voucherRedemption #contactForm').trigger("reset");

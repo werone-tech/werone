@@ -737,11 +737,11 @@ section {
 /*--------------------------------------------------------------
 # More Services
 --------------------------------------------------------------*/
-.more-services {
+.articleIndex {
   padding-top: 20px;
 }
 
-.more-services .card {
+.articleIndex .card {
   border: 0;
   padding: 160px 20px 20px 20px;
   position: relative;
@@ -751,7 +751,7 @@ section {
   background-position: center center;
 }
 
-.more-services .card-body {
+.articleIndex .card-body {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 30px;
@@ -761,21 +761,21 @@ section {
   border-radius: 5px;
 }
 
-.more-services .card-title {
+.articleIndex .card-title {
   font-weight: 700;
   text-align: center;
   margin-bottom: 15px;
 }
 
-.more-services .card-title a {
+.articleIndex .card-title a {
   color: #222222;
 }
 
-.more-services .card-text {
+.articleIndex .card-text {
   color: #5e5e5e;
 }
 
-.more-services .read-more a {
+.articleIndex .read-more a {
   color: #777777;
   text-transform: uppercase;
   font-weight: 600;
@@ -783,18 +783,18 @@ section {
   transition: 0.4s;
 }
 
-.more-services .read-more a:hover {
+.articleIndex .read-more a:hover {
   text-decoration: underline;
 }
 
-.more-services .card:hover .card-body {
+.articleIndex .card:hover .card-body {
   background: #3498db;
 }
 
-.more-services .card:hover .read-more a,
-.more-services .card:hover .card-title,
-.more-services .card:hover .card-title a,
-.more-services .card:hover .card-text {
+.articleIndex .card:hover .read-more a,
+.articleIndex .card:hover .card-title,
+.articleIndex .card:hover .card-title a,
+.articleIndex .card:hover .card-text {
   color: #fff;
 }
 
@@ -1583,4 +1583,81 @@ section {
 
 #footer .footer-links a:hover {
   color: #3498db;
+}
+
+/*--------------------------------------------------------------
+# articleContent
+--------------------------------------------------------------*/
+.articleContent .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.articleContent .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.articleContent .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.articleContent .content ul li+li {
+  margin-top: 10px;
+}
+
+.articleContent .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #3498db;
+  line-height: 1;
+}
+
+.articleContent .content p:last-child {
+  margin-bottom: 0;
+}
+
+.articleContent .content .btn-learn-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #3498db;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #3498db;
+}
+
+.articleContent .content .btn-learn-more:hover {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+.articleContent .readingTime{
+  margin-bottom: 1rem;
+}
+
+.articleContent .centerImage{
+  display: block; 
+  margin: 0 auto; 
+  max-width: 100%;
+  height: auto; 
+}
+
+@media (min-width: 769px) {
+  .articleContent .centerImage{
+    display: block; 
+    margin: 0 auto; 
+    max-width: 70%;
+    height: auto; 
+  }
 }

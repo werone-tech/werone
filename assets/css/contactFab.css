@@ -1,6 +1,7 @@
 .phoneFab{
     width: 3rem;height: 3rem;background-color: #3498db;border-radius: 50%;
     position: fixed;bottom: 4.5rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+    z-index: 1000;
   }
   
   .phoneFab i {
@@ -14,6 +15,7 @@
   .whatsappFab{
     width: 3rem;height: 3rem;background-color: #25D366;border-radius: 50%;
     position: fixed;bottom: 1rem;right: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;
+    z-index: 1000;
   }
   
   .whatsappFab i {
