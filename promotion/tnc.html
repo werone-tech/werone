@@ -78,7 +78,7 @@
             4. Services not explicitly stated as free in this promotion are not free. However, new clients may be eligible for discounts on other services upon discussion, subject to differing terms and conditions based on individual circumstances.<br><br>
             5. These discounted or free services are provided by WER1 to support fellow small and medium-sized enterprises (SMEs). It is strictly prohibited to misuse or re-market these services as your own business offerings. WER1 Pte. Ltd. reserves the right to take legal action in the event of any such misuse.<br><br>
             6. By signing up for the promotional services, you agree to WER1's privacy policies and to the terms and conditions stated above.<br><br>
-            7. This promotion is <b>valid until 31 December 2023</b>. WER1 Pte. Ltd. reserves the right to modify any terms of the promotion without prior notice. For the latest version of the promotion and its terms and conditions, please refer to the official website of <a href="../index.html">WER1 Pte. Ltd.</a>
+            7. This promotion is <b>valid until <span id="deadline">31 December 2024</span></b>. WER1 Pte. Ltd. reserves the right to modify any terms of the promotion without prior notice. For the latest version of the promotion and its terms and conditions, please refer to the official website of <a href="../index.html">WER1 Pte. Ltd.</a>
 
         </p>
       </div>
@@ -107,6 +107,15 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+    const deadline = document.getElementById('deadline');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const deadline_text = urlParams.get('deadline');
+
+    deadline.textContent = deadline_text;
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
