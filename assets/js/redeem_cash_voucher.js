@@ -28,8 +28,8 @@ $(document).ready(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            $("#voucherRedemption #contactButton").prop('disabled', true);
-            $("#voucherRedemption #contactButton").html('Loading');
+            $("#voucherRedemption .contactButton").prop('disabled', true);
+            $("#voucherRedemption .contactButton").html('Loading');
 
             $("#voucherRedemption .loading").addClass('d-block');
             $('#voucherRedemption .error-message').removeClass('d-block');
@@ -82,34 +82,43 @@ $(document).ready(function() {
                     }
                     else{
                         // Success message
-
+                        window.gtag('event', 'voucher_redemption_form_submission_success');
+                    }
+                    
+                    return res.json();
+        
+                }).then(data => {
+                    console.log(data);
+                    if (data["status"] === "fail" || data["code"] < 0) {
+                        $('#voucherRedemption .error-message').addClass('d-block');
+                        $("#voucherRedemption .loading").removeClass('d-block');
+                        $('#voucherRedemption .sent-message').removeClass('d-block');
+                        window.gtag('event', 'voucher_redemption_fail');
+                    } else {
                         $("#voucherRedemption .loading").removeClass('d-block');
                         $('#voucherRedemption .error-message').removeClass('d-block');
                         $('#voucherRedemption .sent-message').addClass('d-block');
-
-        
-                        window.gtag('event', 'voucher_redemption_form_submission_success');
+                        window.gtag('event', 'voucher_redemption_success');
                     }
-    
-        
+
                 }).catch((error) => {
                     window.gtag('event', 'voucher_redemption_form_submission_error');
                 }).finally(
                     () => {
                         $('#voucherRedemption #contactForm').trigger("reset");
-                        $("#voucherRedemption #contactButton").html('Redeem Now');
-                        $("#voucherRedemption #contactButton").prop('disabled', false);
+                        $("#voucherRedemption .contactButton").html('Redeem Now');
+                        // $("#voucherRedemption .contactButton").prop('disabled', false);
                         $("#voucherRedemption #message").attr("placeholder", "Your Message *");
-                        $('#voucherRedemption #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy and promotion T&C.");
+                        // $('#voucherRedemption #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy and promotion T&C.");
                     }
                 );
             } catch (error) {
                 // window.gtag('event', 'form_submission_error');
                 $('#voucherRedemption #contactForm').trigger("reset");
-                $("#voucherRedemption #contactButton").html('Redeem Now');
-                $("#voucherRedemption #contactButton").prop('disabled', false);
+                $("#voucherRedemption .contactButton").html('Redeem Now');
+                // $("#voucherRedemption .contactButton").prop('disabled', false);
                 $("#voucherRedemption #message").attr("placeholder", "Your Message *");
-                $('#voucherRedemption #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy and promotion T&C.");
+                // $('#voucherRedemption #tnc').html("By submitting this form, you are agreeing to our company's <a href=\"pdpa/pdpa.html\">Privacy Data Protection Act (PDPA)</a> policy and promotion T&C.");
             }
             
         },
