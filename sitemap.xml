@@ -37,6 +37,16 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://wer1.sg/promotion/cash_voucher_200.html</loc>
+  <lastmod>2023-09-01T13:42:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wer1.sg/promotion/cash_voucher_500.html</loc>
+  <lastmod>2023-09-01T13:42:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://wer1.sg/article/new_ep_sep_2023.html</loc>
   <lastmod>2023-09-01T13:42:45+00:00</lastmod>
   <priority>0.64</priority>
@@ -55,6 +65,21 @@
   <loc>https://wer1.sg/article/sg_startup_sep_2023_ch.html</loc>
   <lastmod>2023-09-16T13:42:45+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://wer1.sg/plans/basic.html</loc>
+  <lastmod>2023-12-02T15:30:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wer1.sg/plans/worry-free.html</loc>
+  <lastmod>2023-12-02T15:30:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wer1.sg/plans/full-suite.html</loc>
+  <lastmod>2023-12-02T15:30:27+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 </urlset>
