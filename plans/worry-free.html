@@ -59,7 +59,7 @@
             <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
             <li><a class="nav-link scrollto" href="../index.html#services">Services</a></li>
             <li><a class="nav-link scrollto" href="../index.html#testimonials">Testimonials</a></li>
-            <li><a class="nav-link scrollto" href="../index.html#pricing">Pricings</a></li>
+            <li><a class="nav-link scrollto" href="../index.html#pricing">Incorporation Packages</a></li>
             <li><a class="nav-link scrollto" href="../index.html#faq">FAQ</a></li>
             <li><a class="nav-link scrollto" href="../index.html#contact">Contact Us</a></li>
             <li><a class="nav-link scrollto" href="../article/index.html">Insights</a></li>
@@ -89,37 +89,39 @@
           <p class="small-title">What's included</p>
           <div class="col-lg-12">
               <p style="text-align: justify;">
-                  <p class="detail-title">1. Incorporation</p>
+                  <p class="detail-title">1. Company Incorporation</p>
                   <p class="details"><span>&#183;</span>Registration preparation and filing, including S$315 government fees</p>
                   <p class="details"><span>&#183;</span>Company constitution</p>
                   <p class="details"><span>&#183;</span>All post-incorporation documents (share certificates, registers, minutes book)</p>
                   <p class="details"><span>&#183;</span>ACRA name checking</p>
                   <p class="details"><span>&#183;</span>Free Business Profile</p>
             
-                  <p class="detail-title">2. Named Corporate Secretary</p>
+                  <p class="detail-title">2. Corporate Secretary Service</p>
                   <p class="details"><span>&#183;</span>12-month named corporate secretary</p>
                   <p class="details"><span>&#183;</span>Routine Annual Filing, including S$60 annual filing fee</p>
                   <p class="details"><span>&#183;</span>Preparation of First AGM document</p>
 
-                  <p class="detail-title">3. Registered Address</p>
+                  <p class="detail-title">3. Registered Office Address</p>
                   <p class="details"><span>&#183;</span>12-month registered business address</p>
 
-                  <p class="detail-title">4. Business Bank Account</p>
+                  <p class="detail-title">4. Business Bank Account Opening Assistance</p>
                   <p class="details"><span>&#183;</span>Assist in connecting with our banking partners</p>
 
-                  <p class="detail-title">5. Accounting & Tax</p>
+                  <p class="detail-title">5. Corporate Income Tax Preparation & Filing</p>
                   <p class="details"><span>&#183;</span>Annual Management reports</p>
-                  <p class="details"><span>&#183;</span>Payroll and dividends tax advice</p>
-                  <p class="details"><span>&#183;</span>Unaudited Financial Statements (UFS)</p>
                   <p class="details"><span>&#183;</span>Estimated Chargeable Income (ECI) filing</p>
+                  <p class="details"><span>&#183;</span>Payroll and dividends tax advice</p>
+
+                  <p class="detail-title">6. Unaudited Financial Statement Preparation & Annual Return Filing</p>
+                  <p class="details"><span>&#183;</span>Unaudited Financial Statements (UFS)</p>
                   <p class="details"><span>&#183;</span>Annual tax return filling</p>
 
-                  <p class="detail-title">6. Bookkeeping</p>
+                  <p class="detail-title">7. Annual Bookkeeping Service</p>
                   <p class="details"><span>&#183;</span>Bookkeeping (for less than 50 transaction & S$60k revenue annually)</p>
                   <p class="details"><span>&#183;</span>Upgradeable at a discounted price if the bookkeeping workload exceeded the stated amount</p>
 
 
-                  <p class="detail-title">7. Account Manager Service</p>
+                  <p class="detail-title">8. Dedicated Account Manager</p>
                   <p class="details"><span>&#183;</span>Professional human account manager, not machine or AI, dedicated to serve you</p>
 
               </p>
@@ -402,6 +404,7 @@
 function showPopup() {
 document.getElementById('overlay').style.display = 'block';
 document.getElementById('popup').style.display = 'block';
+window.gtag('event', 'worryfree_popup_shown');
 }
 
 // Function to close the overlay and popup
@@ -416,6 +419,7 @@ document.cookie = 'popupChoiceWorryFree=dismissed; expires=' + getExpirationTime
 function redirect() {
 closePopup();
 // Change 'destination_page.html' to the URL of the page you want to redirect to
+window.gtag('event', 'worryfree_popup_redirect');
 window.location.href = 'full-suite.html';
 }
 
@@ -434,7 +438,7 @@ return document.cookie.includes('popupChoiceWorryFree=dismissed');
 // Function to start the countdown and show the overlay and popup if the cookie doesn't exist
 function startCountdown() {
 if (!checkCookie()) {
-  setTimeout(showPopup, 15000); // 30 seconds in milliseconds
+  setTimeout(showPopup, 25000); // 30 seconds in milliseconds
 }
 }
 
