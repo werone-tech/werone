@@ -196,6 +196,18 @@
       </div>
     </section>
 
+    <div id="overlay"></div>
+
+    <div id="popup">
+      <p class="upgrade-title">Upgrade?</p>
+      <p><br>The Basic plan you are viewing doesn't include the following services:<br>1. Accounting & Tax<br>2. Bookkeeping<br>3. Account Manager Service</p>
+      <p>Do you wish to include them?</p>
+      <center>
+        <button class="choice-btn" onclick="redirect()">Yes</button>
+        <button class="choice-btn" onclick="closePopup()">No</button>
+      </center>
+    </div>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -294,7 +306,105 @@
     .detail-title {
       font-weight: 600;
     }
+
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 0px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      border-radius: 0.5rem;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      z-index: 998; /* Ensure the overlay is behind the popup but above the content */
+    }
+
+    .upgrade-title {
+      font-weight: 600;
+    }
+
+    .choice-btn {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 50px;
+      transition: 0.3s;
+      line-height: 1;
+      color: #3498db;
+      animation-delay: 0.8s;
+      margin-top: 6px;
+      border: 2px solid #3498db;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+    }
+
+    .choice-btn:hover {
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+    }
   </style>
+
+  <script>
+      // Function to show the overlay and popup
+  function showPopup() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+  }
+
+  // Function to close the overlay and popup
+  function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+    // Set a cookie to indicate the user's choice
+    document.cookie = 'popupChoiceBasic=dismissed; expires=' + getExpirationTime();
+  }
+
+  // Function to redirect to another page
+  function redirect() {
+    closePopup();
+    // Change 'destination_page.html' to the URL of the page you want to redirect to
+    window.location.href = 'worry-free.html';
+  }
+
+  // Function to calculate the expiration time for the cookie (1 hour)
+  function getExpirationTime() {
+    const expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + 60 * 60 * 1000); // 1 hour in milliseconds
+    return expirationDate.toUTCString();
+  }
+
+  // Function to check if the cookie exists
+  function checkCookie() {
+    return document.cookie.includes('popupChoiceBasic=dismissed');
+  }
+
+  // Function to start the countdown and show the overlay and popup if the cookie doesn't exist
+  function startCountdown() {
+    if (!checkCookie()) {
+      setTimeout(showPopup, 15000); // 30 seconds in milliseconds
+    }
+  }
+
+  // Call the startCountdown function when the page loads
+  window.onload = startCountdown;
+  </script>
 
 
 </body>
